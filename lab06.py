@@ -19,15 +19,6 @@ def encode_pass(password):
     return encoded_pass
 
 
-def decode_pass(encoded_pass):
-    decoded_pass = ''
-    for i in encoded_pass:
-        if i.isdigit():
-            decoded_pass += str(int(i) - 3)
-        else:
-            pass
-    return decoded_pass
-
 
 if __name__ == "__main__":
 
@@ -42,12 +33,6 @@ if __name__ == "__main__":
             password = input("Please enter your password to encode: ")
             encoded_pass = encode_pass(password)
             print("Your password has been encoded and stored!")
-            print("")
-
-        elif menu_option == 2:
-            print(f"The encoded password is {encoded_pass}, and the original password is", end=' ')
-            decoded_pass = decode_pass(encoded_pass)
-            print(decoded_pass)
             print("")
 
         elif menu_option == 3:
